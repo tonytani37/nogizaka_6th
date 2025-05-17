@@ -6,16 +6,10 @@ body {
   color: #6a1b9a; /* 乃木坂っぽい紫 */
 }
 
-/* .container {
+.container {
   display: flex;
   justify-content: center;
-} */
-
-.container {
-  width: 90%;
-  max-width: 1200px;
 }
-
 
 .member-detail {
   display: flex;
@@ -59,6 +53,8 @@ body {
 
 .member-image img {
   max-width: 200px;
+  /* max-width: 80%; */
+  height: auto;
   border-radius: 10px;
 }
 .color-box {
@@ -76,7 +72,7 @@ body {
     text-align: center;
   }
   
-  .member-image img {
+  /* .member-image img {
     max-width: 100%;
-  }
+  } */
 }
