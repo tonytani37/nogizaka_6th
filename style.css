@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: center;
 } */
- 
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -31,7 +31,7 @@ body {
 }
 
 .member-name {
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 0;
   font-weight: bold;
 }
