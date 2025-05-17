@@ -3,7 +3,7 @@ fetch('nogizaka_profile.json')
   .then(data => {
     const members = data[0]["メンバー"];
     const list = document.getElementById('memberList');
-    console.log(members);
+    // console.log(members);
 
     members.forEach((member, index) => {
       const li = document.createElement('li');
