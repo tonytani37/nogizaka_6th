@@ -36,26 +36,26 @@ fetch('nogizaka_profile.json')
 
     const yomiEl = document.createElement('div');
     yomiEl.className = 'member-yomi';
-    yomiEl.textContent = member["よみがな"]+"　　　("+member["組"]+"組)";
+    yomiEl.textContent = member["よみがな"]+"　　　("+member["組"]+"組)";    
 
     const table = document.createElement('table');
     table.className = 'member-table';
 
     // 表示項目の順序を定義（imageは除外）
     const displayOrder = [
-      ["コール名", member["コール名"]],
-      ["サイリウムカラー", member["サイリウムカラー"]],
-      ["生年月日", member["生年月日"]],
-      ["年齢", ageText],
-      ["血液型", member["血液型"]],
-      ["星座", member["星座"]],
-      ["身長", member["身長"] ? `${member["身長"]}cm` : ""],
-      ["出身地", member["出身地"]],
-      ["好きな食べ物", member["好きな食べ物"]],
-      ["長所", member["長所"]],
-      ["短所", member["短所"]],
-      ["好きな乃木坂楽曲", member["好きな乃木坂楽曲"]],
-      ["好きな乃木坂MV", member["好きな乃木坂MV"]],
+        ["サイリウムカラー", member["サイリウムカラー"]],
+        ["コール名", member["コール名"]],
+        ["生年月日", member["生年月日"]],
+        ["年齢", ageText],
+        ["血液型", member["血液型"]],
+        ["星座", member["星座"]],
+        ["身長", member["身長"] ? `${member["身長"]}cm` : ""],
+        ["出身地", member["出身地"]],
+        ["好きな食べ物", member["好きな食べ物"]],
+        ["長所", member["長所"]],
+        ["短所", member["短所"]],
+        ["好きな乃木坂楽曲", member["好きな乃木坂楽曲"]],
+        ["好きな乃木坂MV", member["好きな乃木坂MV"]],
     ];
 
     displayOrder.forEach(([label, value]) => {
@@ -73,7 +73,15 @@ fetch('nogizaka_profile.json')
 
     infoDiv.appendChild(nameEl);
     infoDiv.appendChild(yomiEl);
+    // infoDiv.appendChild(box);
+    member['color'].forEach(color => {
+      const box = document.createElement('div');
+      box.className = 'color-box';
+      box.style.backgroundColor = color;
+      infoDiv.appendChild(box);
+  });
     infoDiv.appendChild(table);
+  
 
     // 右側（画像）エリア
     const imageDiv = document.createElement('div');

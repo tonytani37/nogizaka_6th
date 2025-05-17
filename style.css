@@ -55,3 +55,11 @@ body {
   max-width: 320px;
   border-radius: 6px;
 }
+.color-box {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid #000;
+}
