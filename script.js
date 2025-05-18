@@ -3,32 +3,38 @@ fetch('nogizaka_profile.json')
   .then(data => {
     const members = data[0]["メンバー"];
     const list = document.getElementById('memberList');
-    // console.log(members);
 
-    // members.forEach((member, index) => {
-    //   const li = document.createElement('li');
-    //   const link = document.createElement('a');
-    //   link.href = `member.html?index=${index}`;
-    //   link.textContent = member.名前;
-    //   li.appendChild(link);
-    //   li.append(`（${member.よみがな}）`);
-    //   list.appendChild(li);
-    // });
     members.forEach((member, index) => {
-      const li = document.createElement('li');
+      // const li = document.createElement('li');
 
+      // const link = document.createElement('a');
+      // link.href = `member.html?index=${index}`;
+      // link.textContent = member.名前;
+      // // link.className = 'member-link';
+
+      // const yomi = document.createElement('span');
+      // yomi.className = 'yomigana';
+      // yomi.textContent = `（${member.よみがな}）`;
+
+      const tr = document.createElement('tr');
+
+      const nameTd = document.createElement('td');
       const link = document.createElement('a');
       link.href = `member.html?index=${index}`;
       link.textContent = member.名前;
-      // link.className = 'member-link';
+      link.className = 'member-table';
+      nameTd.appendChild(link);
 
-      const yomi = document.createElement('span');
-      yomi.className = 'yomigana';
-      yomi.textContent = `（${member.よみがな}）`;
 
-      li.appendChild(link);
-      li.appendChild(yomi);
-      list.appendChild(li);
+      const yomiTd = document.createElement('td');
+      yomiTd.className = 'yomigana';
+      yomiTd.textContent = "　　("+member.よみがな+")";
+
+
+      list.appendChild(nameTd);
+      list.appendChild(yomiTd);
+      // list.appendChild(li);
+      list.appendChild(tr);
     });
   })
   .catch(error => {
