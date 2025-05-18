@@ -56,6 +56,7 @@ fetch('nogizaka_profile.json')
         ["短所", member["短所"]],
         ["好きな乃木坂楽曲", member["好きな乃木坂楽曲"]],
         ["好きな乃木坂MV", member["好きな乃木坂MV"]],
+        ["あーや先輩が考えたあだ名", member["あーや先輩が考えたあだ名"]],
     ];
 
     displayOrder.forEach(([label, value]) => {
