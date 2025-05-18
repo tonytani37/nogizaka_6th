@@ -20,6 +20,7 @@ fetch('nogizaka_profile.json')
       const link = document.createElement('a');
       link.href = `member.html?index=${index}`;
       link.textContent = member.名前;
+      // link.className = 'member-link';
 
       const yomi = document.createElement('span');
       yomi.className = 'yomigana';
