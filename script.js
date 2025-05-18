@@ -5,13 +5,28 @@ fetch('nogizaka_profile.json')
     const list = document.getElementById('memberList');
     // console.log(members);
 
+    // members.forEach((member, index) => {
+    //   const li = document.createElement('li');
+    //   const link = document.createElement('a');
+    //   link.href = `member.html?index=${index}`;
+    //   link.textContent = member.名前;
+    //   li.appendChild(link);
+    //   li.append(`（${member.よみがな}）`);
+    //   list.appendChild(li);
+    // });
     members.forEach((member, index) => {
       const li = document.createElement('li');
+
       const link = document.createElement('a');
       link.href = `member.html?index=${index}`;
       link.textContent = member.名前;
+
+      const yomi = document.createElement('span');
+      yomi.className = 'yomigana';
+      yomi.textContent = `（${member.よみがな}）`;
+
       li.appendChild(link);
-      li.append(`（${member.よみがな}）`);
+      li.appendChild(yomi);
       list.appendChild(li);
     });
   })

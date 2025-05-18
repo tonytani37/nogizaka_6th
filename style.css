@@ -71,8 +71,23 @@ body {
     align-items: center;
     text-align: center;
   }
-  
-  /* .member-image img {
-    max-width: 100%;
-  } */
+}
+
+  #backButton {
+    margin-top: 20px;
+    padding: 10px 16px;
+    font-size: １０px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  #backButton:hover {
+    background-color: #ccc;
+  }
+
+  .yomigana {
+  font-size: 0.6em;
+  color: #666;
+  margin-left: 5px;
 }

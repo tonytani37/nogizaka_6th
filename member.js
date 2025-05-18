@@ -99,3 +99,8 @@ fetch('nogizaka_profile.json')
   .catch(error => {
     console.error('読み込みエラー:', error);
   });
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("backButton").addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  });
