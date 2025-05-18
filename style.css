@@ -1,14 +1,14 @@
 body {
-  display: flex;
+  /* display: flex; */
   justify-content: center;  /* 横方向中央 */
   align-items: center;      /* 縦方向中央 */
-  height: 100vh;            /* 画面全体の高さ */
+  /* height: 100vh;            画面全体の高さ */
+  /* margin: 0; */
+  /* flex-direction: column;   縦並び */
+  /* text-align: center;      テキストも中央に */
+  font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
-  flex-direction: column;   /* 縦並び */
-  /* text-align: center;       テキストも中央に */
-  /* font-family: 'Helvetica Neue', sans-serif;
-  margin: 0; */
-  /* padding: 50px;  */
+  padding: 50px; 
   background-color: #fff;
   color: #6a1b9a; /* 乃木坂っぽい紫 */
 }
