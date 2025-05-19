@@ -1,4 +1,4 @@
-fetch('nogizaka_profile.json')
+fetch('data/nogizaka_profile.json')
   .then(response => response.json())
   .then(data => {
     const members = data[0]["メンバー"];

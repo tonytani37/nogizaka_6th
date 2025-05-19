@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const index = parseInt(urlParams.get('index'), 10);
 
-fetch('nogizaka_profile.json')
+fetch('data/nogizaka_profile.json')
   .then(response => response.json())
   .then(data => {
     const members = data[0]["メンバー"];
